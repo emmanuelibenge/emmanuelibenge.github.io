@@ -62,3 +62,67 @@ p {
 section h2 + p {
   text-indent: 2rem;
 }
+
+/* Add links */
+a:link {
+  color: #aa6666;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #884444;
+}
+
+a:hover,
+a:focus {
+  color: #aa6666;
+  text-decoration: none;
+  outline: none;
+}
+
+a[href^="http"]::after {
+  content: url('external-link-52.png');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+
+/* List styles */
+ul, ol {
+  line-height: 1.6;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+/* Navigation styles */
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: #aa6666;
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #884444;
+  outline: none;
+}
