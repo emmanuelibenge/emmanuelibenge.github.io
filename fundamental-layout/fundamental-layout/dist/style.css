@@ -62,3 +62,17 @@ nav ul {
   justify-content: space-between;
   align-items: center;
 }
+ 
+nav {
+  background-color: black;
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.feature {
+  width: 200px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
