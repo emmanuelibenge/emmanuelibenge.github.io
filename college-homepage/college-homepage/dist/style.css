@@ -33,3 +33,11 @@ footer {
 footer p {
   text-align: center;
 }
+/* Font setup */
+body {
+  font-family: 'Merriweather', serif;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+}
