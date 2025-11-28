@@ -9,21 +9,37 @@ function randomValueFromArray(array) {
   return array[random];
 }
 
-// Raw text strings
+// Simple silly story generator
 
-// Willy the Goblin
-// Big Daddy
-// Father Christmas
 
-// the soup kitchen
-// Disneyland
-// the White House
+function randomValueFromArray(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
-// spontaneously combusted
-// melted into a puddle on the sidewalk
-// turned into a slug and slithered away
+const storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in disbelief as :insertz:. Bob saw the whole thing, and he felt :emotion:.';
 
-// Partial return random string function
+const insertX = ['Willy the Goblin', 'Big Daddy', 'Santa Claus'];
+const insertY = ['the soup kitchen', 'the haunted house', 'the mall'];
+const insertZ = ['a giant banana fell from the sky', 'a marching band danced', 'the ground turned to jelly'];
+const emotions = ['surprised', 'delighted', 'confused'];
+
+function generateStory() {
+  let newStory = storyText;
+  newStory = newStory.replace(':insertx:', randomValueFromArray(insertX));
+  newStory = newStory.replace(':inserty:', randomValueFromArray(insertY));
+  newStory = newStory.replace(':insertz:', randomValueFromArray(insertZ));
+  newStory = newStory.replace(':emotion:', randomValueFromArray(emotions));
+
+  const name = customName.value.trim();
+  if (name.length > 0) {
+    newStory = newStory.replace('Bob', name);
+  }
+
+  story.textContent = newStory;
+}
+
+randomize.addEventListener('click', generateStory);
+
 
 function returnRandomStoryString() {
   // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
