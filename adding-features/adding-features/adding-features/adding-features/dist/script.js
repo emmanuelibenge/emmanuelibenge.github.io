@@ -54,35 +54,6 @@ class Ball extends Shape {
   }
 }
 
-class EvilCircle extends Shape {
-  constructor(x, y) {
-    super(x, y, 20, 20);
-    this.color = 'white';
-    this.size = 10;
-
-    window.addEventListener('keydown', (e) => {
-      switch(e.key) {
-        case 'a': this.x -= this.velX; break;
-        case 'd': this.x += this.velX; break;
-        case 'w': this.y -= this.velY; break;
-        case 's': this.y += this.velY; break;
-      }
-    });
-  }
-
-  draw() {
-    // will add drawing later
-  }
-
-  checkBounds() {
-    // will add bounds later
-  }
-
-  collisionDetect() {
-    // will add collision later
-  }
-}
-
 function randomRGB() {
   return `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`;
 }
