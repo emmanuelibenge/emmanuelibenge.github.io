@@ -31,7 +31,7 @@ h1, h2, h3 {
   color: #333;
 }
 
-p, input, li, table, label {
+p, input, li, table, label, button {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #333;
 }
@@ -39,7 +39,7 @@ p, input, li, table, label {
 h1 {
   font-size: 4rem;
   text-align: center;
-  color: #333; 
+  color: #333;
   text-shadow: 2px 2px 10px #ccc;
 }
 
@@ -56,6 +56,8 @@ p, li, table {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+
+/* || header layout */
 
 nav, article, footer, .secondary {
   background-color: white;
@@ -96,7 +98,7 @@ nav a {
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: white; 
+  color: white;
 }
 
 nav .search {
@@ -193,6 +195,11 @@ audio {
 
 .show-hide {
   cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  margin-bottom: 20px;
 }
 
 .comments h2 {
@@ -226,7 +233,7 @@ audio {
 
 .show-hide {
   text-align: center;
-  width: 150px;
+  min-width: 150px;
 }
 
 .comment-form input, .comment-form label, .show-hide {
@@ -234,7 +241,7 @@ audio {
   line-height: 32px;
 }
 
-.comment-form input[type="submit"], .show-hide {
+.comment-form input[type="submit"] {
   background: #333;
   border: 0;
   color: white;
